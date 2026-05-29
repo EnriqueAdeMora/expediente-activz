@@ -1,49 +1,61 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
-.exp-wrap{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;padding:20px;}
-.exp-container{max-width:700px;margin:0 auto;background:#fff;border-radius:12px;padding:24px;border:1px solid #e0e0e0;}
-.exp-header{display:flex;align-items:center;gap:14px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid #f0f0f0;}
+.exp-wrap{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;padding:16px;}
+.exp-container{max-width:780px;margin:0 auto;background:#fff;border-radius:12px;padding:20px;border:1px solid #e0e0e0;}
+.exp-header{display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid #f0f0f0;}
 .exp-avatar{width:48px;height:48px;border-radius:50%;background:#e6f1fb;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;color:#185FA5;flex-shrink:0;}
 .exp-header-info h2{font-size:17px;font-weight:600;color:#1a1a1a;}
 .exp-header-info p{font-size:13px;color:#888;margin-top:2px;}
-.exp-section{margin-bottom:22px;}
-.exp-section-title{font-size:11px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid #f0f0f0;}
-.exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.exp-field{display:flex;flex-direction:column;gap:4px;}
-.exp-field.full{grid-column:1/-1;}
-.exp-field label{font-size:12px;color:#666;font-weight:500;}
-.exp-field input,.exp-field select,.exp-field textarea{font-size:14px;padding:9px 11px;border:1px solid #e0e0e0;border-radius:8px;background:#fafafa;color:#1a1a1a;width:100%;}
-.exp-field textarea{resize:vertical;min-height:80px;}
-.tel-wrap{display:flex;gap:6px;}
-.tel-wrap select{width:140px;flex-shrink:0;}
-.tel-wrap input{flex:1;}
+.sec{margin-bottom:20px;}
+.sec-title{font-size:11px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #f0f0f0;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.f{display:flex;flex-direction:column;gap:4px;}
+.f.full{grid-column:1/-1;}
+.f label{font-size:12px;color:#666;font-weight:500;}
+.f input,.f select,.f textarea{font-size:14px;padding:8px 10px;border:1px solid #e0e0e0;border-radius:8px;background:#fafafa;color:#1a1a1a;width:100%;}
+.f textarea{resize:vertical;min-height:70px;}
+.tel-w{display:flex;gap:6px;}
+.tel-w select{width:130px;flex-shrink:0;}
+.tel-w input{flex:1;}
 .zona-btns{display:flex;gap:8px;margin-bottom:4px;}
-.zona-btn{flex:1;padding:9px;border:1px solid #e0e0e0;border-radius:8px;background:#fafafa;cursor:pointer;font-size:13px;font-weight:600;color:#666;text-align:center;}
-.zona-btn.sel-zona{border:2px solid #185FA5;background:#e6f1fb;color:#185FA5;}
-.prod-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
-.prod-item{border:1px solid #e0e0e0;border-radius:8px;padding:10px 12px;}
-.prod-item-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}
-.prod-item-top span{font-size:13px;font-weight:600;color:#1a1a1a;}
-.prod-precios{font-size:11px;color:#888;margin-bottom:6px;}
-.prod-precios span{display:block;}
-.prod-precios .precio-destacado{color:#185FA5;font-weight:600;font-size:13px;}
-.add-btn{width:100%;padding:5px;border:1px solid #185FA5;border-radius:6px;background:#fff;color:#185FA5;font-size:12px;font-weight:600;cursor:pointer;}
-.add-btn.added{background:#185FA5;color:#fff;}
-.carrito{background:#f8f9fa;border-radius:8px;padding:14px;margin-top:12px;display:none;}
-.carrito-title{font-size:12px;font-weight:600;color:#666;margin-bottom:10px;}
-.carrito-item{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #e0e0e0;font-size:13px;}
-.carrito-item:last-child{border-bottom:none;}
-.remove-btn{color:#E24B4A;cursor:pointer;font-size:16px;font-weight:600;background:none;border:none;padding:0 4px;}
-.carrito-total{margin-top:10px;padding-top:10px;border-top:2px solid #e0e0e0;}
-.carrito-row{display:flex;justify-content:space-between;font-size:13px;padding:3px 0;color:#666;}
-.carrito-row.total{font-weight:700;font-size:15px;color:#1a1a1a;margin-top:4px;}
-.carrito-row.envio{color:#185FA5;}
-.cat-btns{display:flex;gap:8px;margin-bottom:12px;}
-.cat-btn{flex:1;padding:10px;border:1px solid #e0e0e0;border-radius:8px;background:#fafafa;cursor:pointer;font-size:13px;font-weight:600;color:#666;text-align:center;}
-.cat-btn.sel{border:2px solid #185FA5;background:#e6f1fb;color:#185FA5;}
-.precio-badge{display:inline-block;background:#eaf3de;color:#3B6D11;font-size:13px;font-weight:600;padding:6px 14px;border-radius:8px;margin-top:8px;}
-.exp-btn{width:100%;padding:13px;background:#185FA5;border:none;border-radius:8px;font-size:15px;font-weight:600;color:#fff;cursor:pointer;margin-top:8px;}
+.zona-btn{flex:1;padding:9px;border:1px solid #e0e0e0;border-radius:8px;background:#fafafa;cursor:pointer;font-size:12px;font-weight:600;color:#666;text-align:center;}
+.zona-btn.sz{border:2px solid #185FA5;background:#e6f1fb;color:#185FA5;}
+.cat-tabs{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap;}
+.cat-tab{padding:8px 14px;border:1px solid #e0e0e0;border-radius:8px;background:#fafafa;cursor:pointer;font-size:12px;font-weight:600;color:#666;}
+.cat-tab.sel{border:2px solid #185FA5;background:#e6f1fb;color:#185FA5;}
+.items-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.ic{border:1px solid #e0e0e0;border-radius:8px;padding:10px 12px;}
+.ic.inc{border-color:#185FA5;background:#f0f6ff;}
+.ic-name{font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:2px;}
+.ic-cont{font-size:11px;color:#888;margin-bottom:4px;line-height:1.4;}
+.ic-price{font-size:12px;color:#185FA5;font-weight:600;margin-bottom:6px;}
+.ic-pts{font-size:11px;color:#888;margin-bottom:6px;}
+.qty-w{display:flex;align-items:center;gap:8px;}
+.qb{width:26px;height:26px;border:1px solid #e0e0e0;border-radius:6px;background:#fff;cursor:pointer;font-size:16px;font-weight:600;color:#185FA5;display:flex;align-items:center;justify-content:center;line-height:1;}
+.qn{font-size:14px;font-weight:600;color:#1a1a1a;min-width:18px;text-align:center;}
+.cart-wrap{background:#f8f9fa;border-radius:10px;padding:14px;margin-top:6px;}
+.cart-item{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid #e8e8e8;font-size:13px;}
+.cart-item:last-child{border-bottom:none;}
+.ct{margin-top:10px;padding-top:10px;border-top:2px solid #e0e0e0;}
+.ct-row{display:flex;justify-content:space-between;font-size:13px;padding:2px 0;color:#666;}
+.ct-row.envio{color:#185FA5;}
+.ct-row.pts{color:#3B6D11;}
+.ct-row.total{font-weight:700;font-size:15px;color:#1a1a1a;margin-top:6px;padding-top:6px;border-top:1px solid #e0e0e0;}
+.promo-wrap{margin-top:10px;padding:10px 12px;border:1px solid #e0e0e0;border-radius:8px;background:#fff8f0;}
+.promo-toggle{display:flex;align-items:center;gap:10px;cursor:pointer;}
+.promo-toggle input[type=checkbox]{width:18px;height:18px;cursor:pointer;}
+.promo-label{font-size:13px;font-weight:600;color:#FF6B00;}
+.promo-desc{font-size:11px;color:#888;margin-top:4px;}
+.warn-box{background:#fff3cd;border:1px solid #ffc107;border-radius:8px;padding:12px;margin-top:12px;font-size:13px;color:#856404;text-align:center;}
+.warn-box strong{display:block;font-size:14px;margin-bottom:4px;}
+.resumen-wrap{background:#f0f6ff;border:1px solid #185FA5;border-radius:10px;padding:16px;margin-top:6px;}
+.resumen-title{font-size:14px;font-weight:600;color:#185FA5;margin-bottom:10px;}
+.resumen-item{font-size:13px;color:#1a1a1a;padding:3px 0;border-bottom:1px solid #e0e0e0;}
+.resumen-item:last-child{border-bottom:none;}
+.datos-wrap{background:#f8f9fa;border-radius:10px;padding:14px;margin-top:6px;}
+.exp-btn{width:100%;padding:12px;background:#185FA5;border:none;border-radius:8px;font-size:14px;font-weight:600;color:#fff;cursor:pointer;margin-top:8px;}
 .exp-btn:disabled{background:#b0c8e0;}
+.exp-btn.secondary{background:#fff;color:#185FA5;border:1px solid #185FA5;margin-top:6px;}
 .exp-status{text-align:center;font-size:13px;padding:10px;border-radius:8px;margin-top:10px;display:none;}
 .exp-status.ok{background:#eaf3de;color:#3B6D11;}
 .exp-status.err{background:#fcebeb;color:#A32D2D;}
@@ -60,217 +72,181 @@
   </div>
 </div>
 
-<div class="exp-section">
-  <div class="exp-section-title">Datos generales</div>
-  <div class="exp-grid">
-    <div class="exp-field full"><label>Nombre completo</label><input type="text" id="exp-nombre" placeholder="Ej. Javier Sosa Flores" oninput="expUpdateHeader()"/></div>
-    <div class="exp-field"><label>Edad</label><input type="number" id="exp-edad" placeholder="Años"/></div>
-    <div class="exp-field"><label>Teléfono</label>
-      <div class="tel-wrap">
+<!-- DATOS GENERALES -->
+<div class="sec">
+  <div class="sec-title">Datos generales</div>
+  <div class="g2">
+    <div class="f full"><label>Nombre completo</label><input type="text" id="exp-nombre" placeholder="Ej. Javier Sosa Flores" oninput="expUH()"/></div>
+    <div class="f"><label>Edad</label><input type="number" id="exp-edad" placeholder="Años"/></div>
+    <div class="f"><label>Teléfono</label>
+      <div class="tel-w">
         <select id="exp-pais">
-          <option value="+52">🇲🇽 +52</option>
-          <option value="+1">🇺🇸 +1</option>
-          <option value="+54">🇦🇷 +54</option>
-          <option value="+55">🇧🇷 +55</option>
-          <option value="+56">🇨🇱 +56</option>
-          <option value="+57">🇨🇴 +57</option>
-          <option value="+506">🇨🇷 +506</option>
-          <option value="+593">🇪🇨 +593</option>
-          <option value="+503">🇸🇻 +503</option>
-          <option value="+502">🇬🇹 +502</option>
-          <option value="+504">🇭🇳 +504</option>
-          <option value="+505">🇳🇮 +505</option>
-          <option value="+507">🇵🇦 +507</option>
-          <option value="+595">🇵🇾 +595</option>
-          <option value="+51">🇵🇪 +51</option>
-          <option value="+1787">🇵🇷 +1787</option>
-          <option value="+1809">🇩🇴 +1809</option>
-          <option value="+598">🇺🇾 +598</option>
-          <option value="+58">🇻🇪 +58</option>
-          <option value="+34">🇪🇸 +34</option>
-          <option value="+44">🇬🇧 +44</option>
-          <option value="+33">🇫🇷 +33</option>
-          <option value="+49">🇩🇪 +49</option>
-          <option value="+39">🇮🇹 +39</option>
-          <option value="+81">🇯🇵 +81</option>
-          <option value="+86">🇨🇳 +86</option>
-          <option value="+91">🇮🇳 +91</option>
-          <option value="+61">🇦🇺 +61</option>
-          <option value="+64">🇳🇿 +64</option>
-          <option value="+27">🇿🇦 +27</option>
+          <option value="+52">🇲🇽 +52</option><option value="+1">🇺🇸 +1</option><option value="+54">🇦🇷 +54</option>
+          <option value="+55">🇧🇷 +55</option><option value="+56">🇨🇱 +56</option><option value="+57">🇨🇴 +57</option>
+          <option value="+506">🇨🇷 +506</option><option value="+593">🇪🇨 +593</option><option value="+34">🇪🇸 +34</option>
+          <option value="+44">🇬🇧 +44</option><option value="+1809">🇩🇴 +1809</option><option value="+58">🇻🇪 +58</option>
         </select>
         <input type="tel" id="exp-tel" placeholder="Número"/>
       </div>
     </div>
-    <div class="exp-field"><label>Peso (kg)</label><input type="number" id="exp-peso" placeholder="Ej. 85"/></div>
-    <div class="exp-field"><label>Altura (cm)</label><input type="number" id="exp-altura" placeholder="Ej. 170"/></div>
-    <div class="exp-field full"><label>Ciudad / Estado</label><input type="text" id="exp-ciudad" placeholder="Ej. Tuxtepec, Oaxaca"/></div>
+    <div class="f"><label>Peso (kg)</label><input type="number" id="exp-peso" placeholder="Ej. 85"/></div>
+    <div class="f"><label>Altura (cm)</label><input type="number" id="exp-altura" placeholder="Ej. 170"/></div>
+    <div class="f full"><label>Ciudad / Estado</label><input type="text" id="exp-ciudad" placeholder="Ej. Tuxtepec, Oaxaca"/></div>
   </div>
 </div>
 
-<div class="exp-section">
-  <div class="exp-section-title">Historial clínico</div>
-  <div class="exp-grid">
-    <div class="exp-field full"><label>Padecimiento principal</label><input type="text" id="exp-pad" placeholder="Ej. Próstata + Presión arterial" oninput="expUpdateHeader()"/></div>
-    <div class="exp-field"><label>Años con el padecimiento</label><input type="number" id="exp-anos" placeholder="Años"/></div>
-    <div class="exp-field"><label>Enfermedades adicionales</label><input type="text" id="exp-enf" placeholder="Ej. Colesterol, hígado"/></div>
-    <div class="exp-field full"><label>Medicamentos que toma</label><input type="text" id="exp-med" placeholder="Ej. Metformina 500mg"/></div>
-    <div class="exp-field full"><label>Cuidados actuales</label><input type="text" id="exp-cuid" placeholder="Ej. Dieta, ejercicio"/></div>
-    <div class="exp-field full"><label>Principal dolor a resolver</label><textarea id="exp-dolor" placeholder="¿Qué es lo que más le preocupa?"></textarea></div>
+<!-- HISTORIAL CLINICO -->
+<div class="sec">
+  <div class="sec-title">Historial clínico</div>
+  <div class="g2">
+    <div class="f full"><label>Padecimiento principal</label><input type="text" id="exp-pad" placeholder="Ej. Diabetes tipo 2" oninput="expUH()"/></div>
+    <div class="f"><label>Años con el padecimiento</label><input type="number" id="exp-anos" placeholder="Años"/></div>
+    <div class="f"><label>Enfermedades adicionales</label><input type="text" id="exp-enf" placeholder="Ej. Colesterol, hígado"/></div>
+    <div class="f full"><label>Medicamentos que toma</label><input type="text" id="exp-med" placeholder="Ej. Metformina 500mg"/></div>
+    <div class="f full"><label>Cuidados actuales</label><input type="text" id="exp-cuid" placeholder="Ej. Dieta, ejercicio"/></div>
+    <div class="f full"><label>Principal dolor a resolver</label><textarea id="exp-dolor" placeholder="¿Qué es lo que más le preocupa?"></textarea></div>
   </div>
 </div>
 
-<div class="exp-section">
-  <div class="exp-section-title">Zona de entrega</div>
+<!-- ZONA -->
+<div class="sec">
+  <div class="sec-title">Zona de entrega</div>
   <div class="zona-btns">
-    <div class="zona-btn" onclick="expZona(this,'local')" id="zona-local">📍 Tampico / Cd. Madero / Altamira<br><small style="font-weight:400;font-size:11px;">Pick up $99 MXN</small></div>
-    <div class="zona-btn" onclick="expZona(this,'foraneo')" id="zona-foraneo">🚚 Resto de México<br><small style="font-weight:400;font-size:11px;">Domicilio $219 MXN</small></div>
+    <div class="zona-btn" onclick="expZona(this,'local')" id="zona-local">📍 Tampico / Cd. Madero / Altamira<br><small style="font-weight:400">Centro de Recaudo</small></div>
+    <div class="zona-btn" onclick="expZona(this,'foraneo')" id="zona-foraneo">🚚 Resto de México<br><small style="font-weight:400">DHL / Estafeta</small></div>
   </div>
 </div>
 
-<div class="exp-section">
-  <div class="exp-section-title">Productos individuales</div>
-  <div class="prod-grid" id="prod-grid">
-    <div class="prod-item" data-nombre="GNM-X" data-precio="1218">
-      <div class="prod-item-top"><span>GNM-X</span></div>
-      <div class="prod-precios">
-        <span>Distribuidor: $1,218</span>
-        <span class="precio-destacado" id="precio-GNMX">Selecciona zona</span>
-      </div>
-      <button class="add-btn" onclick="expAgregar(this,'GNM-X',1218)">+ Agregar</button>
+<!-- COTIZACION -->
+<div class="sec">
+  <div class="sec-title">Cotización</div>
+  <div class="cat-tabs">
+    <div class="cat-tab sel" onclick="expTab(this,'ind')">Individuales</div>
+    <div class="cat-tab" onclick="expTab(this,'bas')">Básico</div>
+    <div class="cat-tab" onclick="expTab(this,'med')">Mediano</div>
+    <div class="cat-tab" onclick="expTab(this,'pre')">Premium</div>
+  </div>
+  <div id="exp-items"></div>
+</div>
+
+<!-- CARRITO -->
+<div class="sec" id="cart-sec" style="display:none;">
+  <div class="sec-title">Resumen del pedido</div>
+  <div class="cart-wrap">
+    <div id="cart-items"></div>
+    <div class="ct">
+      <div class="ct-row envio"><span id="envio-label">Envío</span><span id="envio-monto">—</span></div>
+      <div class="ct-row pts">🏆 <span>Puntos distribuidor</span><span id="cart-pts">0 pts</span></div>
+      <div class="ct-row total"><span>Total</span><span id="cart-total">—</span></div>
     </div>
-    <div class="prod-item" data-nombre="LINQ" data-precio="1462">
-      <div class="prod-item-top"><span>LINQ</span></div>
-      <div class="prod-precios">
-        <span>Distribuidor: $1,462</span>
-        <span class="precio-destacado" id="precio-LINQ">Selecciona zona</span>
-      </div>
-      <button class="add-btn" onclick="expAgregar(this,'LINQ',1462)">+ Agregar</button>
-    </div>
-    <div class="prod-item" data-nombre="OPTIMEND" data-precio="1462">
-      <div class="prod-item-top"><span>OPTIMEND</span></div>
-      <div class="prod-precios">
-        <span>Distribuidor: $1,462</span>
-        <span class="precio-destacado" id="precio-OPTIMEND">Selecciona zona</span>
-      </div>
-      <button class="add-btn" onclick="expAgregar(this,'OPTIMEND',1462)">+ Agregar</button>
-    </div>
-    <div class="prod-item" data-nombre="TRIFECTA" data-precio="3654">
-      <div class="prod-item-top"><span>TRIFECTA</span></div>
-      <div class="prod-precios">
-        <span>Distribuidor: $3,654</span>
-        <span class="precio-destacado" id="precio-TRIFECTA">Selecciona zona</span>
-      </div>
-      <button class="add-btn" onclick="expAgregar(this,'TRIFECTA',3654)">+ Agregar</button>
-    </div>
-    <div class="prod-item" data-nombre="AIRO" data-precio="975">
-      <div class="prod-item-top"><span>AIRO</span></div>
-      <div class="prod-precios">
-        <span>Distribuidor: $975</span>
-        <span class="precio-destacado" id="precio-AIRO">Selecciona zona</span>
-      </div>
-      <button class="add-btn" onclick="expAgregar(this,'AIRO',975)">+ Agregar</button>
-    </div>
-    <div class="prod-item" data-nombre="NITROXPRO" data-precio="1218">
-      <div class="prod-item-top"><span>NITROXPRO</span></div>
-      <div class="prod-precios">
-        <span>Distribuidor: $1,218</span>
-        <span class="precio-destacado" id="precio-NITROXPRO">Selecciona zona</span>
-      </div>
-      <button class="add-btn" onclick="expAgregar(this,'NITROXPRO',1218)">+ Agregar</button>
-    </div>
-    <div class="prod-item" data-nombre="Café Everyday" data-precio="731">
-      <div class="prod-item-top"><span>Café Everyday</span></div>
-      <div class="prod-precios">
-        <span>Distribuidor: $731</span>
-        <span class="precio-destacado" id="precio-CafeEveryday">Selecciona zona</span>
-      </div>
-      <button class="add-btn" onclick="expAgregar(this,'Café Everyday',731)">+ Agregar</button>
-    </div>
-    <div class="prod-item" data-nombre="EMORA set" data-precio="3289">
-      <div class="prod-item-top"><span>EMORA set</span></div>
-      <div class="prod-precios">
-        <span>Distribuidor: $3,289</span>
-        <span class="precio-destacado" id="precio-EMORAset">Selecciona zona</span>
-      </div>
-      <button class="add-btn" onclick="expAgregar(this,'EMORA set',3289)">+ Agregar</button>
+    <div class="promo-wrap" id="promo-wrap" style="display:none;">
+      <label class="promo-toggle">
+        <input type="checkbox" id="promo-check" onchange="expActCart()"/>
+        <span class="promo-label">🎁 Promo Mayo 2026 — +$487.20 MXN</span>
+      </label>
+      <div class="promo-desc">1x GNM-X (30 caps) + 1x Crema Revitalizadora EMORA • Del 4 al 31 de Mayo</div>
     </div>
   </div>
-
-  <div class="carrito" id="exp-carrito">
-    <div class="carrito-title">Resumen del pedido</div>
-    <div id="carrito-items"></div>
-    <div class="carrito-total">
-      <div class="carrito-row envio" id="carrito-envio-row"><span>Envío</span><span id="carrito-envio-monto">—</span></div>
-      <div class="carrito-row total"><span>Total</span><span id="carrito-total-monto">—</span></div>
-    </div>
+  <div class="warn-box">
+    <strong>⚠️ Verifica dos veces antes de compartir con el cliente</strong>
+    Revisa cantidades, precios y zona de entrega antes de enviar la cotización.
   </div>
 </div>
 
-<div class="exp-section">
-  <div class="exp-section-title">Paquete de interés</div>
-  <div class="cat-btns">
-    <div class="cat-btn" onclick="expCat(this,'basico')">Básico</div>
-    <div class="cat-btn" onclick="expCat(this,'mediano')">Mediano</div>
-    <div class="cat-btn" onclick="expCat(this,'premium')">Premium</div>
-  </div>
-  <div class="exp-field" id="exp-paq-wrap" style="display:none;">
-    <label>Paquete específico</label>
-    <select id="exp-paquete" onchange="expMostrarPrecio()">
-      <option value="">Seleccionar paquete...</option>
-    </select>
-    <div id="exp-precio-badge" style="display:none;" class="precio-badge"></div>
-  </div>
-</div>
-
-<div class="exp-section">
-  <div class="exp-section-title">Seguimiento</div>
-  <div class="exp-grid">
-    <div class="exp-field"><label>Fecha de respuesta prometida</label><input type="date" id="exp-fecha"/></div>
-    <div class="exp-field"><label>Resultado de la llamada</label>
+<!-- SEGUIMIENTO -->
+<div class="sec">
+  <div class="sec-title">Seguimiento</div>
+  <div class="g2">
+    <div class="f"><label>Fecha de respuesta prometida</label><input type="date" id="exp-fecha"/></div>
+    <div class="f"><label>Resultado de la llamada</label>
       <select id="exp-resultado">
         <option value="">Seleccionar...</option>
-        <option value="quiere-comprar">Quiere comprar</option>
-        <option value="necesita-pensar">Necesita pensarlo</option>
-        <option value="pendiente-precio">Pendiente por precio</option>
-        <option value="no-interesado">No interesado</option>
+        <option value="Quiere comprar">Quiere comprar</option>
+        <option value="Necesita pensarlo">Necesita pensarlo</option>
+        <option value="Pendiente por precio">Pendiente por precio</option>
+        <option value="No interesado">No interesado</option>
       </select>
     </div>
-    <div class="exp-field full"><label>Notas de la llamada</label><textarea id="exp-notas" placeholder="Resumen, objeciones, acuerdos..."></textarea></div>
+    <div class="f full"><label>Notas de la llamada</label><textarea id="exp-notas" placeholder="Resumen, objeciones, acuerdos..."></textarea></div>
   </div>
 </div>
 
-<button class="exp-btn" id="exp-btn" onclick="expGuardar()">Guardar en GHL</button>
+<!-- DATOS PARA PEDIDO -->
+<div class="sec">
+  <div class="sec-title">Datos para el pedido (solicitar al cliente)</div>
+  <div class="datos-wrap">
+    <div class="g2">
+      <div class="f full"><label>Nombre completo (como en ID oficial)</label><input type="text" id="ped-nombre" placeholder="Nombre completo oficial"/></div>
+      <div class="f full"><label>Domicilio completo con C.P. y entre calles</label><textarea id="ped-domicilio" placeholder="Calle, número, colonia, C.P., entre calles, ciudad, estado" style="min-height:60px;"></textarea></div>
+      <div class="f"><label>Email</label><input type="email" id="ped-email" placeholder="correo@email.com"/></div>
+      <div class="f"><label>CURP</label><input type="text" id="ped-curp" placeholder="Si no tiene → fecha de nacimiento"/></div>
+      <div class="f"><label>RFC</label><input type="text" id="ped-rfc" placeholder="Si no tiene → estado de nacimiento"/></div>
+      <div class="f"><label>Fecha de nacimiento (si no tiene CURP/RFC)</label><input type="date" id="ped-fnac"/></div>
+      <div class="f full"><label>Estado donde fue registrada su acta de nacimiento</label><input type="text" id="ped-estado" placeholder="Ej. Veracruz"/></div>
+    </div>
+  </div>
+</div>
+
+<button class="exp-btn" id="exp-btn" onclick="expGuardar()">💾 Guardar expediente en GHL</button>
 <div class="exp-status" id="exp-status"></div>
 
 </div>
 </div>
 
 <script>
-var expCatSel='';
-var expZonaSel='';
-var expCarrito=[];
-var ENVIO_LOCAL=99;
-var ENVIO_FORANEO=219;
+var zonaSel='';
+var tabSel='ind';
+var carrito={};
 
-var expPaqs={
-  basico:[
-    {n:'Emora Avanzado',p:4750},{n:'VitalPro Avanzado',p:6772},{n:'NitroxPro Avanzado',p:6650},{n:'Airo Avanzado',p:6650},{n:'GNMX Avanzado',p:6650}
+var CAT={
+  ind:[
+    {id:'gnmx',n:'GNM-X',c:'30 cápsulas',pL:1332,pD:1462,pts:50},
+    {id:'linq',n:'LINQ',c:'60 cápsulas',pL:1576,pD:1705,pts:60},
+    {id:'optimend',n:'OPTIMEND',c:'60 cápsulas',pL:1576,pD:1705,pts:60},
+    {id:'airo',n:'AIRO (polvo)',c:'300g polvo',pL:1089,pD:1218,pts:40},
+    {id:'airo_spa',n:'AIRO SPA 15 sobres',c:'15 sobres',pL:723,pD:853,pts:25},
+    {id:'airo_kit2',n:'Kit AIRO x2',c:'2 unidades',pL:1211,pD:1340,pts:45},
+    {id:'nitrox',n:'NITROXPRO',c:'362g polvo',pL:1332,pD:1462,pts:50},
+    {id:'cafe1',n:'Café Everyday (1 bolsa)',c:'1 bolsa',pL:845,pD:974,pts:30},
+    {id:'cafe2',n:'Café Everyday (2 bolsas)',c:'2 bolsas',pL:1332,pD:1462,pts:50},
+    {id:'cafe3',n:'Café Variety Kit (3 bolsas)',c:'3 bolsas mix',pL:1576,pD:1705,pts:60},
+    {id:'trifecta',n:'TRIFECTA',c:'1x GNM-X + 1x LINQ + 1x OPTIMEND',pL:3768,pD:3898,pts:150},
+    {id:'emora_barro',n:'EMORA Barro Purificador',c:'1 unidad',pL:602,pD:731,pts:20},
+    {id:'emora_esencia',n:'EMORA Esencia Tonificadora',c:'1 unidad',pL:602,pD:731,pts:20},
+    {id:'emora_limp',n:'EMORA Limpiador Esencial',c:'1 unidad',pL:480,pD:609,pts:15},
+    {id:'emora_suero',n:'EMORA Suero Rejuvenecedor',c:'1 unidad',pL:1089,pD:1218,pts:40},
+    {id:'emora_crema',n:'EMORA Crema Revitalizadora',c:'1 unidad',pL:1089,pD:1218,pts:40}
   ],
-  mediano:[
-    {n:'Optimend Avanzado',p:7624},{n:'Epigenético Avanzado',p:7624},{n:'Linq Avanzado',p:7624},{n:'Bienestar Avanzado',p:7502},{n:'Café Mix 16Pack Avanzado',p:7379},{n:'Café 16Pack Avanzado',p:7379},{n:'EpiEsencial Avanzado',p:8111},{n:'EverydayEpiEsencial Avanzado',p:8355},{n:'Completo Avanzado',p:8355}
+  bas:[
+    {id:'b_emora',n:'Emora Avanzado',c:'1x Barro + 1x Esencia + 1x Limpiador + 1x Suero + 1x Crema',vp:135,pL:3532,pD:4750,pts:135,promo:false,envioIncluido:true},
+    {id:'b_gnmx',n:'GNM-X Avanzado',c:'6x GNM-X (30 caps c/u = 180 caps total)',vp:200,pL:5481,pD:6650,pts:200,promo:true,envioIncluido:true},
+    {id:'b_airo',n:'Airo Avanzado',c:'7x AIRO polvo',vp:200,pL:5481,pD:6650,pts:200,promo:true,envioIncluido:true},
+    {id:'b_nitrox',n:'NitroxPro Avanzado',c:'5x NITROXPRO',vp:200,pL:5481,pD:6650,pts:200,promo:true,envioIncluido:true},
+    {id:'b_vitalpro',n:'VitalPro Avanzado',c:'3x NITROXPRO + 2x AIRO',vp:200,pL:5603,pD:6772,pts:200,promo:true,envioIncluido:true}
   ],
-  premium:[
-    {n:'Bienestar Premium',p:12789},{n:'GNMX Premium',p:12910},{n:'Epigenético Premium',p:12910},{n:'Café 32Pack Premium',p:13220},{n:'Completo Premium',p:13398},{n:'EpiEsencial Premium',p:13763},{n:'EverydayEpiEsencial Premium',p:14250}
+  med:[
+    {id:'m_optimend',n:'Optimend Avanzado',c:'5x OPTIMEND (60 caps c/u)',vp:235,pL:6455,pD:7625,pts:235,promo:true,envioIncluido:true},
+    {id:'m_linq',n:'Linq Avanzado',c:'5x LINQ (60 caps c/u)',vp:235,pL:6455,pD:7625,pts:235,promo:true,envioIncluido:true},
+    {id:'m_epige',n:'Epigenético Avanzado',c:'1x AIRO + 2x OPTIMEND + 2x LINQ + 3x GNM-X',vp:235,pL:6455,pD:7625,pts:235,promo:true,envioIncluido:true},
+    {id:'m_bienestar',n:'Bienestar Avanzado',c:'2x OPTIMEND + 2x LINQ + 3x GNM-X',vp:235,pL:6334,pD:7503,pts:235,promo:true,envioIncluido:true},
+    {id:'m_cafe16',n:'Café 16Pack Avanzado',c:'16x Café Everyday Moka Coco',vp:250,pL:6454,pD:7380,pts:250,promo:true,envioIncluido:true},
+    {id:'m_cafemix',n:'Café Mix 16Pack Avanzado',c:'16 cafés mix (Americano + Café de Olla + Moka Coco)',vp:250,pL:6454,pD:7380,pts:250,promo:true,envioIncluido:true},
+    {id:'m_epiesen',n:'EpiEsencial Avanzado',c:'1x NITROX + 1x AIRO + 2x OPTIMEND + 2x LINQ + 3x GNM-X',vp:250,pL:6943,pD:8112,pts:250,promo:true,envioIncluido:true},
+    {id:'m_everyday',n:'EverydayEpiEsencial Avanzado',c:'2x Café + 1x NITROX + 1x AIRO + 2x OPTIMEND + 2x LINQ + 2x GNM-X',vp:250,pL:7186,pD:8355,pts:250,promo:true,envioIncluido:true},
+    {id:'m_completo',n:'Completo Avanzado',c:'Set EMORA + 1x NITROX + 1x AIRO + 1x OPTIMEND + 1x LINQ + 1x GNM-X',vp:265,pL:7186,pD:8355,pts:265,promo:true,envioIncluido:true}
+  ],
+  pre:[
+    {id:'p_bienestar',n:'Bienestar Premium',c:'6x GNM-X + 4x LINQ + 4x OPTIMEND',vp:500,pL:12789,pD:12789,pts:500,promo:true,envioIncluido:true},
+    {id:'p_gnmx',n:'GNM-X Premium',c:'15x GNM-X (30 caps c/u = 450 caps total)',vp:500,pL:12911,pD:12911,pts:500,promo:true,envioIncluido:true},
+    {id:'p_epige',n:'Epigenético Premium',c:'6x GNM-X + 4x LINQ + 4x OPTIMEND + 2x AIRO',vp:500,pL:12911,pD:12911,pts:500,promo:true,envioIncluido:true},
+    {id:'p_cafe32',n:'Café 32Pack Premium',c:'32x Café Everyday Moka Coco',vp:500,pL:12294,pD:13220,pts:500,promo:true,envioIncluido:true},
+    {id:'p_completo',n:'Completo Premium',c:'10x EMORA set + 2x NITROX + 2x AIRO + 2x OPTIMEND + 2x LINQ + 2x GNM-X',vp:500,pL:13398,pD:13398,pts:500,promo:true,envioIncluido:true},
+    {id:'p_epiesen',n:'EpiEsencial Premium',c:'4x GNM-X + 3x LINQ + 3x OPTIMEND + 2x AIRO + 2x NITROX',vp:500,pL:13763,pD:13763,pts:500,promo:true,envioIncluido:true},
+    {id:'p_everyday',n:'EverydayEpiEsencial Premium',c:'4x Café + 3x GNM-X + 3x LINQ + 3x OPTIMEND + 2x AIRO + 2x NITROX',vp:500,pL:14251,pD:14251,pts:500,promo:true,envioIncluido:true}
   ]
 };
 
-var prodIds={
-  'GNM-X':'precio-GNMX','LINQ':'precio-LINQ','OPTIMEND':'precio-OPTIMEND','TRIFECTA':'precio-TRIFECTA',
-  'AIRO':'precio-AIRO','NITROXPRO':'precio-NITROXPRO','Café Everyday':'precio-CafeEveryday','EMORA set':'precio-EMORAset'
-};
-
-function expUpdateHeader(){
+function expUH(){
   var n=document.getElementById('exp-nombre').value;
   var p=document.getElementById('exp-pad').value;
   var ini=n.split(' ').map(function(x){return x[0]||'';}).join('').slice(0,2).toUpperCase();
@@ -279,75 +255,100 @@ function expUpdateHeader(){
   document.getElementById('exp-pad-header').textContent=p||'Sin padecimiento registrado';
 }
 
-function expZona(el,zona){
-  expZonaSel=zona;
-  document.querySelectorAll('.zona-btn').forEach(function(e){e.classList.remove('sel-zona');});
-  el.classList.add('sel-zona');
-  var envio=zona==='local'?ENVIO_LOCAL:ENVIO_FORANEO;
-  Object.keys(prodIds).forEach(function(nombre){
-    var precio=parseInt(document.querySelector('[data-nombre="'+nombre+'"]').dataset.precio);
-    var total=precio+envio;
-    var el2=document.getElementById(prodIds[nombre]);
-    if(el2) el2.textContent='Con envío: $'+total.toLocaleString('es-MX');
+function expZona(el,z){
+  zonaSel=z;
+  document.querySelectorAll('.zona-btn').forEach(function(e){e.classList.remove('sz');});
+  el.classList.add('sz');
+  expRender();
+  expActCart();
+}
+
+function expTab(el,t){
+  tabSel=t;
+  document.querySelectorAll('.cat-tab').forEach(function(e){e.classList.remove('sel');});
+  el.classList.add('sel');
+  expRender();
+}
+
+function expPrecio(item){
+  if(zonaSel==='local') return item.pL;
+  return item.pD;
+}
+
+function expRender(){
+  var items=CAT[tabSel]||[];
+  var html='<div class="items-grid">';
+  items.forEach(function(item){
+    var p=expPrecio(item);
+    var qty=(carrito[item.id]&&carrito[item.id].qty)||0;
+    var inC=qty>0;
+    html+='<div class="ic'+(inC?' inc':'')+'" id="ic-'+item.id+'">';
+    html+='<div class="ic-name">'+item.n+'</div>';
+    html+='<div class="ic-cont">'+item.c+'</div>';
+    if(item.vp) html+='<div class="ic-pts">'+item.vp+' VP</div>';
+    html+='<div class="ic-price">$'+p.toLocaleString('es-MX')+' MXN';
+    if(item.envioIncluido) html+=' <span style="font-size:10px;color:#3B6D11;">✓ envío inc.</span>';
+    html+='</div>';
+    if(item.pts) html+='<div class="ic-pts">🏆 '+item.pts+' pts</div>';
+    html+='<div class="qty-w">';
+    html+='<button class="qb" onclick="expQ(\''+item.id+'\','+(p)+',-1,\''+item.n+'\','+(item.pts||0)+','+(item.envioIncluido?1:0)+')">−</button>';
+    html+='<span class="qn" id="qn-'+item.id+'">'+qty+'</span>';
+    html+='<button class="qb" onclick="expQ(\''+item.id+'\','+(p)+',1,\''+item.n+'\','+(item.pts||0)+','+(item.envioIncluido?1:0)+')">+</button>';
+    html+='</div></div>';
   });
-  expActualizarCarrito();
+  html+='</div>';
+  document.getElementById('exp-items').innerHTML=html;
 }
 
-function expAgregar(btn,nombre,precio){
-  var idx=expCarrito.findIndex(function(i){return i.nombre===nombre;});
-  if(idx>-1){
-    expCarrito.splice(idx,1);
-    btn.textContent='+ Agregar';
-    btn.classList.remove('added');
-  } else {
-    expCarrito.push({nombre:nombre,precio:precio});
-    btn.textContent='✓ Agregado';
-    btn.classList.add('added');
-  }
-  expActualizarCarrito();
+function expQ(id,precio,delta,nombre,pts,envioInc){
+  var cur=(carrito[id]&&carrito[id].qty)||0;
+  var nuevo=Math.max(0,cur+delta);
+  if(nuevo===0) delete carrito[id];
+  else carrito[id]={qty:nuevo,precio:precio,nombre:nombre,pts:pts,envioIncluido:envioInc===1};
+  var qEl=document.getElementById('qn-'+id);
+  if(qEl) qEl.textContent=nuevo;
+  var ic=document.getElementById('ic-'+id);
+  if(ic){if(nuevo>0)ic.classList.add('inc');else ic.classList.remove('inc');}
+  expActCart();
 }
 
-function expActualizarCarrito(){
-  var carrito=document.getElementById('exp-carrito');
-  var itemsEl=document.getElementById('carrito-items');
-  if(expCarrito.length===0){carrito.style.display='none';return;}
-  carrito.style.display='block';
+function expActCart(){
+  var keys=Object.keys(carrito);
+  var sec=document.getElementById('cart-sec');
+  if(keys.length===0){sec.style.display='none';return;}
+  sec.style.display='block';
   var html='';
   var subtotal=0;
-  expCarrito.forEach(function(item){
-    subtotal+=item.precio;
-    html+='<div class="carrito-item"><span>'+item.nombre+'</span><span>$'+item.precio.toLocaleString('es-MX')+'</span></div>';
+  var totalPts=0;
+  var tieneEnvioIncluido=false;
+  keys.forEach(function(id){
+    var it=carrito[id];
+    var itTotal=it.precio*it.qty;
+    subtotal+=itTotal;
+    totalPts+=it.pts*it.qty;
+    if(it.envioIncluido) tieneEnvioIncluido=true;
+    html+='<div class="cart-item"><span>'+it.qty+'x '+it.nombre+'</span><span style="color:#185FA5;font-weight:600;">$'+itTotal.toLocaleString('es-MX')+'</span></div>';
   });
-  itemsEl.innerHTML=html;
-  var envio=expZonaSel==='local'?ENVIO_LOCAL:(expZonaSel==='foraneo'?ENVIO_FORANEO:0);
-  var envioLabel=expZonaSel==='local'?'Pick up ($99)':expZonaSel==='foraneo'?'Domicilio ($219)':'(selecciona zona)';
-  var total=subtotal+(envio>0?envio:0);
-  document.getElementById('carrito-envio-row').querySelector('span:first-child').textContent='Envío '+envioLabel;
-  document.getElementById('carrito-envio-monto').textContent=envio>0?'$'+envio:'—';
-  document.getElementById('carrito-total-monto').textContent='$'+total.toLocaleString('es-MX');
-}
-
-function expCat(el,cat){
-  expCatSel=cat;
-  document.querySelectorAll('.cat-btn').forEach(function(e){e.classList.remove('sel');});
-  el.classList.add('sel');
-  var sel=document.getElementById('exp-paquete');
-  sel.innerHTML='<option value="">Seleccionar paquete...</option>';
-  expPaqs[cat].forEach(function(p){
-    var o=document.createElement('option');
-    o.value=p.n+'|'+p.p;
-    o.textContent=p.n+' — $'+p.p.toLocaleString('es-MX')+' MXN';
-    sel.appendChild(o);
-  });
-  document.getElementById('exp-paq-wrap').style.display='flex';
-  document.getElementById('exp-precio-badge').style.display='none';
-}
-
-function expMostrarPrecio(){
-  var val=document.getElementById('exp-paquete').value;
-  var badge=document.getElementById('exp-precio-badge');
-  if(val){var precio=val.split('|')[1];badge.textContent='$'+parseInt(precio).toLocaleString('es-MX')+' MXN';badge.style.display='inline-block';}
-  else{badge.style.display='none';}
+  document.getElementById('cart-items').innerHTML=html;
+  var envioMonto=0;
+  var envioLabel='Envío';
+  if(!tieneEnvioIncluido){
+    if(zonaSel==='local'){envioMonto=99;envioLabel='Envío Pick up ($99)';}
+    else if(zonaSel==='foraneo'){envioMonto=210;envioLabel='Envío DHL ($210)';}
+  } else {
+    envioLabel='Envío incluido en paquete ✓';
+  }
+  var promoMonto=0;
+  var promoCheck=document.getElementById('promo-check');
+  if(promoCheck&&promoCheck.checked) promoMonto=487.20;
+  var total=subtotal+envioMonto+promoMonto;
+  document.getElementById('envio-label').textContent=envioLabel;
+  document.getElementById('envio-monto').textContent=envioMonto>0?'$'+envioMonto:'—';
+  document.getElementById('cart-pts').textContent=totalPts+' pts';
+  document.getElementById('cart-total').textContent='$'+total.toLocaleString('es-MX')+' MXN';
+  var promoWrap=document.getElementById('promo-wrap');
+  if(tieneEnvioIncluido) promoWrap.style.display='block';
+  else promoWrap.style.display='none';
 }
 
 function expGuardar(){
@@ -355,16 +356,16 @@ function expGuardar(){
   if(!nombre){expStatus('Ingresa el nombre del contacto.','err');return;}
   var btn=document.getElementById('exp-btn');
   btn.textContent='Guardando...';btn.disabled=true;
-  var paqVal=document.getElementById('exp-paquete').value;
-  var paqNombre=paqVal?paqVal.split('|')[0]:'—';
-  var paqPrecio=paqVal?'$'+parseInt(paqVal.split('|')[1]).toLocaleString('es-MX')+' MXN':'—';
+  var keys=Object.keys(carrito);
+  var productosStr=keys.length>0?keys.map(function(id){var i=carrito[id];return i.qty+'x '+i.nombre+' — $'+(i.precio*i.qty).toLocaleString('es-MX');}).join('\n  '):'—';
+  var subtotal=keys.reduce(function(a,id){return a+carrito[id].precio*carrito[id].qty;},0);
+  var tieneEnvioInc=keys.some(function(id){return carrito[id].envioIncluido;});
+  var envioMonto=tieneEnvioInc?0:(zonaSel==='local'?99:zonaSel==='foraneo'?210:0);
+  var promoMonto=document.getElementById('promo-check').checked?487.20:0;
+  var total=subtotal+envioMonto+promoMonto;
+  var totalPts=keys.reduce(function(a,id){return a+carrito[id].pts*carrito[id].qty;},0);
   var pais=document.getElementById('exp-pais').value;
   var tel=document.getElementById('exp-tel').value;
-  var envio=expZonaSel==='local'?'Pick up $99':expZonaSel==='foraneo'?'Domicilio $219':'—';
-  var productosStr=expCarrito.length>0?expCarrito.map(function(i){return i.nombre+' $'+i.precio.toLocaleString('es-MX');}).join(', '):'—';
-  var envioMonto=expZonaSel==='local'?99:expZonaSel==='foraneo'?219:0;
-  var subtotal=expCarrito.reduce(function(a,i){return a+i.precio;},0);
-  var totalStr=expCarrito.length>0?'$'+(subtotal+envioMonto).toLocaleString('es-MX')+' MXN':'—';
   var nota='EXPEDIENTE CLÍNICO — '+new Date().toLocaleDateString('es-MX')+'\n'
     +'━━━━━━━━━━━━━━━━━━━━━━━━━━\n'
     +'DATOS GENERALES\n'
@@ -382,11 +383,20 @@ function expGuardar(){
     +'• Cuidados actuales: '+(document.getElementById('exp-cuid').value||'—')+'\n'
     +'• Principal dolor: '+(document.getElementById('exp-dolor').value||'—')+'\n\n'
     +'COTIZACIÓN\n'
-    +'• Zona: '+(expZonaSel==='local'?'Tampico/Cd.Madero/Altamira':'Resto de México')+'\n'
-    +'• Envío: '+envio+'\n'
-    +'• Productos: '+productosStr+'\n'
-    +'• Paquete: '+paqNombre+' '+paqPrecio+'\n'
-    +'• Total estimado: '+totalStr+'\n\n'
+    +'• Zona: '+(zonaSel==='local'?'Tampico/Cd.Madero/Altamira':'Resto de México')+'\n'
+    +'• Productos:\n  '+productosStr+'\n'
+    +'• Envío: $'+envioMonto+'\n'
+    +(promoMonto>0?'• Promo Mayo: $487.20 (1x GNM-X + 1x Crema EMORA)\n':'')
+    +'• TOTAL: $'+total.toLocaleString('es-MX')+' MXN\n'
+    +'• Puntos distribuidor: '+totalPts+' pts\n\n'
+    +'DATOS PARA PEDIDO\n'
+    +'• Nombre oficial: '+(document.getElementById('ped-nombre').value||'—')+'\n'
+    +'• Domicilio: '+(document.getElementById('ped-domicilio').value||'—')+'\n'
+    +'• Email: '+(document.getElementById('ped-email').value||'—')+'\n'
+    +'• CURP: '+(document.getElementById('ped-curp').value||'—')+'\n'
+    +'• RFC: '+(document.getElementById('ped-rfc').value||'—')+'\n'
+    +'• Fecha nacimiento: '+(document.getElementById('ped-fnac').value||'—')+'\n'
+    +'• Estado acta nacimiento: '+(document.getElementById('ped-estado').value||'—')+'\n\n'
     +'SEGUIMIENTO\n'
     +'• Resultado llamada: '+(document.getElementById('exp-resultado').value||'—')+'\n'
     +'• Fecha respuesta: '+(document.getElementById('exp-fecha').value||'—')+'\n'
@@ -397,20 +407,22 @@ function expGuardar(){
   .then(function(r){return r.json();})
   .then(function(data){
     var c=data.contacts&&data.contacts[0];
-    if(!c){expStatus('Contacto no encontrado en GHL.','err');btn.textContent='Guardar en GHL';btn.disabled=false;return;}
+    if(!c){expStatus('Contacto no encontrado en GHL.','err');btn.textContent='💾 Guardar expediente en GHL';btn.disabled=false;return;}
     return fetch('https://services.leadconnectorhq.com/contacts/'+c.id+'/notes',{method:'POST',headers:{'Authorization':'Bearer '+token,'Version':'2021-04-15','Content-Type':'application/json'},body:JSON.stringify({body:nota,userId:c.id})});
   })
   .then(function(r){
-    if(r&&r.ok){expStatus('Expediente guardado en GHL ✓','ok');}
+    if(r&&r.ok){expStatus('✅ Expediente guardado en GHL correctamente','ok');}
     else if(r){expStatus('Error al guardar. Intenta de nuevo.','err');}
-    btn.textContent='Guardar en GHL';btn.disabled=false;
+    btn.textContent='💾 Guardar expediente en GHL';btn.disabled=false;
   })
-  .catch(function(){expStatus('Error de conexión.','err');btn.textContent='Guardar en GHL';btn.disabled=false;});
+  .catch(function(){expStatus('Error de conexión.','err');btn.textContent='💾 Guardar expediente en GHL';btn.disabled=false;});
 }
 
 function expStatus(msg,tipo){
   var el=document.getElementById('exp-status');
   el.textContent=msg;el.className='exp-status '+tipo;el.style.display='block';
-  setTimeout(function(){el.style.display='none';},4000);
+  setTimeout(function(){el.style.display='none';},5000);
 }
+
+expRender();
 </script>
